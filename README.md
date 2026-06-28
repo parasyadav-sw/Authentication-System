@@ -56,11 +56,13 @@ Authentication System/
 ## ⚙️ Installation & Setup
 
 ### Prerequisites
+
 - Node.js installed (Version **v22.5.0 or later** is required for the native SQLite module).
 
 ### Installation Steps
 
 1. **Install Node modules**:
+
    ```bash
    npm install
    ```
@@ -78,13 +80,17 @@ Authentication System/
 ## 🏃 Running the Application
 
 ### Development Mode (Auto-Reloading)
+
 Runs the server with Node's native hot-reload watcher (`--watch`):
+
 ```bash
 npm run dev
 ```
 
 ### Production Start
+
 Starts the server normally:
+
 ```bash
 npm start
 ```
@@ -98,6 +104,7 @@ Once running, navigate to **`http://localhost:3000`** in your web browser.
 The project includes a self-contained test suite (`test_auth.js`) that boots up an isolated test server, executes 11 validation/authentication scenarios (including edge cases), and prints a summary.
 
 Run the test suite with:
+
 ```bash
 node test_auth.js
 ```
@@ -117,6 +124,7 @@ node test_auth.js
 ## 📝 API Endpoints Documentation
 
 ### 1. Register User
+
 - **Endpoint**: `POST /api/auth/register`
 - **Public access**: Yes
 - **Request Body**:
@@ -136,6 +144,7 @@ node test_auth.js
   ```
 
 ### 2. Login User
+
 - **Endpoint**: `POST /api/auth/login`
 - **Public access**: Yes
 - **Request Body**:
@@ -158,6 +167,7 @@ node test_auth.js
   ```
 
 ### 3. Logout User
+
 - **Endpoint**: `POST /api/auth/logout`
 - **Public access**: Yes (clears cookie)
 - **Success Response** (`200 OK` + Clears `auth_token` Cookie):
@@ -168,6 +178,7 @@ node test_auth.js
   ```
 
 ### 4. Fetch Authenticated User (Session Verification)
+
 - **Endpoint**: `GET /api/auth/me`
 - **Protected Access**: Yes (Requires valid `auth_token` cookie)
 - **Success Response** (`200 OK`):
@@ -186,4 +197,30 @@ node test_auth.js
     "error": "Access denied. Please log in."
   }
   ```
-"# Authentication-System" 
+  "# Authentication-System"
+
+---
+
+## 📸 Screenshots Blueprint
+
+Capture the following screenshots to fulfill the submission requirements:
+
+1.  **`01_login_page.png`**: The Login page displaying the form card in Light Mode.
+    ![Login Page](screenshots/01_login_page.png)
+
+2.  **`02_registration_password_strength.png`**: The Registration form displaying real-time password strength indicators (red for weak, green for strong).
+    ![Password Strength](screenshots/02_registration_password_strength.png)
+
+3.  **`03_registration_error.png`**: Registration page showing an error warning (e.g., duplicate username or email exists).
+    ![Registration Error](screenshots/03_registration_error.png)
+
+4.  **`04_jwt_cookie_devtools.png`**: DevTools -> Application -> Cookies showing the `auth_token` cookie with the `HttpOnly` and `SameSite=Strict` checkboxes active.
+    ![JWT Cookie](screenshots/04_jwt_cookie_devtools.png)
+
+5.  **`05_dashboard_protected.png`**: The logged-in dashboard screen showing the welcome message, user details, and active logout button.
+    ![Dashboard](screenshots/05_dashboard_protected.png)
+
+6.  **`06_access_denied.png`**: Access denied response toast when attempting to visit `dashboard.html` directly in an incognito window.
+    ![Access Denied](screenshots/06_access_denied.png)
+
+---
