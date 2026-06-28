@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register | Secure Auth System</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Dynamic Background Orbs -->
+  <div class="bg-orb-extra"></div>
+
+  <!-- Floating Glassmorphic Shapes -->
+  <div class="glass-shape shape-1"></div>
+  <div class="glass-shape shape-2"></div>
+  <div class="glass-shape shape-3"></div>
+  <div class="glass-shape shape-4"></div>
+
+  <!-- Verification Screen Loader -->
+  <div id="page-loader" class="loader-overlay">
+    <div class="spinner"></div>
+  </div>
+
+  <div class="auth-wrapper">
+    <div class="glass-card">
+      <div class="form-header">
+        <h2>Create Account</h2>
+        <p>Set up a secure cryptographic credentials session</p>
+      </div>
+
+      <form id="register-form">
+        <!-- Username Field -->
+        <div class="form-group">
+          <label class="form-label" for="username">Username</label>
+          <div class="input-container">
+            <span class="input-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+            </span>
+            <input class="form-input" type="text" id="username" placeholder="username_123" required autocomplete="username">
+          </div>
+        </div>
+
+        <!-- Email Field -->
+        <div class="form-group">
+          <label class="form-label" for="email">Email Address</label>
+          <div class="input-container">
+            <span class="input-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            </span>
+            <input class="form-input" type="email" id="email" placeholder="yourname@domain.com" required autocomplete="email">
+          </div>
+        </div>
+
+        <!-- Password Field -->
+        <div class="form-group">
+          <label class="form-label" for="password">Password</label>
+          <div class="input-container">
+            <span class="input-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+            </span>
+            <input class="form-input" type="password" id="password" placeholder="••••••••" required autocomplete="new-password">
+          </div>
+          <!-- Password strength container -->
+          <div class="password-strength-container">
+            <div class="strength-meter">
+              <div class="strength-chunk" id="chunk-1"></div>
+              <div class="strength-chunk" id="chunk-2"></div>
+              <div class="strength-chunk" id="chunk-3"></div>
+              <div class="strength-chunk" id="chunk-4"></div>
+            </div>
+            <div class="strength-label">
+              <span>Strength: <strong id="strength-text">Empty</strong></span>
+              <span>Min. 8 chars, 1 Upper, 1 Number, 1 Spec</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Confirm Password Field -->
+        <div class="form-group">
+          <label class="form-label" for="confirm-password">Confirm Password</label>
+          <div class="input-container">
+            <span class="input-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+            </span>
+            <input class="form-input" type="password" id="confirm-password" placeholder="••••••••" required autocomplete="new-password">
+          </div>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" class="btn btn-primary" id="submit-btn">
+          <span>Create Account</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        </button>
+      </form>
+
+      <div class="form-footer">
+        Already registered? <a href="login.html">Sign In</a>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="js/auth.js"></script>
+</body>
+</html>
